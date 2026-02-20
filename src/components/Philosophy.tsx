@@ -20,27 +20,30 @@ export function Philosophy({ onReadStory }: PhilosophyProps) {
         <div className="order-2 lg:order-1 relative">
              <motion.div 
                 style={{ y, rotate }}
-                className="relative z-10 aspect-[4/5] w-full overflow-hidden rounded-[3rem] shadow-2xl shadow-[#DCCBC1]/50"
+                className="relative z-10 aspect-[4/5] w-full overflow-hidden rounded-[3rem] shadow-2xl shadow-rose/50"
             >
                <ImageWithFallback
                  src="https://images.unsplash.com/photo-1755223738985-d7ca7894cab5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib2hvJTIweW9nYSUyMHdvbWFuJTIwc3Bpcml0dWFsJTIwYmVpZ2UlMjBhZXN0aGV0aWMlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjM1Njc2OTV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                  alt="Woman in spiritual contemplation"
+                 width={1080}
+                 height={1350}
+                 loading="lazy"
                  className="h-full w-full object-cover"
                />
             </motion.div>
             
             {/* Decorative Frame */}
-            <div className="absolute top-8 -left-8 w-full h-full border border-[#4A4A40]/20 rounded-[3rem] -z-0" />
+            <div className="absolute top-8 -left-8 w-full h-full border border-primary/20 rounded-[3rem] -z-0" />
         </div>
 
         <div className="order-1 flex flex-col justify-center lg:order-2 text-center lg:text-left">
-          <span className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-[#B99C88]">
+          <span className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
             {t.philosophy.label}
           </span>
-          <h2 className="mb-8 font-editorial text-5xl text-[#4A4A40] sm:text-6xl lg:text-7xl leading-none tracking-wide">
-            {t.philosophy.title} <br/> <span className="italic text-[#B99C88]">{t.philosophy.subtitle}</span>.
+          <h2 className="mb-8 font-editorial text-5xl text-primary sm:text-6xl lg:text-7xl leading-none tracking-wide">
+            {t.philosophy.title} <br/> <span className="italic text-accent">{t.philosophy.subtitle}</span>.
           </h2>
-          <div className="space-y-6 text-lg text-[#6B6B60] leading-relaxed font-light">
+          <div className="space-y-6 text-lg text-muted leading-relaxed font-light">
             <p>
               {t.philosophy.p1}
             </p>
@@ -52,7 +55,7 @@ export function Philosophy({ onReadStory }: PhilosophyProps) {
           <div className="mt-12 flex justify-center lg:justify-start">
                <button 
                   onClick={onReadStory}
-                  className="group relative px-8 py-4 overflow-hidden rounded-full bg-[#4A4A40] text-[#F5F2EB] transition-all hover:bg-[#5e5e52]"
+                  className="group relative px-8 py-4 overflow-hidden rounded-full bg-primary text-warm transition-all hover:bg-primary-hover"
                 >
                    <span className="relative z-10 text-sm uppercase tracking-widest">{t.philosophy.button}</span>
                </button>

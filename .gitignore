@@ -3,3 +3,4 @@ build
 .claude
 .vercel
 .env*
+node_modules

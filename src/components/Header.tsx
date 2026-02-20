@@ -4,7 +4,7 @@ import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const LogoIcon = () => (
-  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#4A4A40]">
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
     {/* Moon */}
     <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C13.5 22 14.9 21.6 16.2 20.9C15.4 20.96 14.7 21 14 21C9.02944 21 5 16.9706 5 12C5 7.02944 9.02944 3 14 3C14.7 3 15.4 3.04 16.2 3.1C14.9 2.4 13.5 2 12 2Z" fill="currentColor" />
     {/* Eye Shape */}
@@ -48,7 +48,7 @@ export function Header({ onNavigate }: HeaderProps) {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-8 text-[#4A4A40]"
+        className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-8 text-primary"
       >
         <a href="#" onClick={(e) => handleNavigation(e, '#')} className="flex items-center gap-3 group">
           <motion.div
@@ -59,14 +59,15 @@ export function Header({ onNavigate }: HeaderProps) {
           </motion.div>
           <div className="text-2xl font-editorial italic tracking-widest relative">
              <span className="relative z-10">ALEXANDRA YOGI.</span>
-             <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#4A4A40] transition-all duration-300 group-hover:w-full"></span>
+             <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full"></span>
           </div>
         </a>
 
         <div className="flex items-center gap-6">
             <button
                 onClick={() => setLanguage(language === 'en' ? 'pl' : 'en')}
-                className="group flex items-center gap-2 text-xs uppercase tracking-[0.2em] transition-all hover:text-[#B99C88]"
+                aria-label={language === 'en' ? 'Switch to Polish' : 'Przełącz na angielski'}
+                className="group flex items-center gap-2 text-xs uppercase tracking-[0.2em] transition-all hover:text-accent"
             >
                 <Globe className="h-4 w-4" />
                 <span className="hidden sm:block">{language === 'en' ? 'EN' : 'PL'}</span>
@@ -74,12 +75,13 @@ export function Header({ onNavigate }: HeaderProps) {
 
             <button
             onClick={() => setIsOpen(true)}
+            aria-label="Open menu"
             className="group flex items-center gap-3 mix-blend-difference"
             >
             <span className="hidden text-xs uppercase tracking-[0.2em] transition-all group-hover:tracking-[0.3em] sm:block">
                 {t.header.menu}
             </span>
-            <div className="relative flex h-8 w-8 items-center justify-center rounded-full border border-[#4A4A40]/20 transition-transform duration-500 group-hover:rotate-90 group-hover:border-[#4A4A40]">
+            <div className="relative flex h-8 w-8 items-center justify-center rounded-full border border-primary/20 transition-transform duration-500 group-hover:rotate-90 group-hover:border-primary">
                 <Menu className="h-4 w-4" />
             </div>
             </button>
@@ -93,15 +95,16 @@ export function Header({ onNavigate }: HeaderProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="fixed inset-0 z-50 flex flex-col bg-[#F5F2EB]/95 backdrop-blur-sm text-[#4A4A40]"
+            className="fixed inset-0 z-50 flex flex-col bg-warm/95 backdrop-blur-sm text-primary"
           >
             <div className="flex justify-end p-8">
               <button
                 onClick={() => setIsOpen(false)}
+                aria-label="Close menu"
                 className="group flex items-center gap-3"
               >
                 <span className="text-xs uppercase tracking-[0.2em]">{t.header.close}</span>
-                <div className="relative flex h-8 w-8 items-center justify-center rounded-full border border-[#4A4A40]/20 transition-transform duration-500 group-hover:rotate-90 group-hover:border-[#4A4A40]">
+                <div className="relative flex h-8 w-8 items-center justify-center rounded-full border border-primary/20 transition-transform duration-500 group-hover:rotate-90 group-hover:border-primary">
                     <X className="h-4 w-4" />
                 </div>
               </button>
@@ -120,11 +123,11 @@ export function Header({ onNavigate }: HeaderProps) {
                     duration: 0.8,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="group relative font-editorial text-5xl sm:text-7xl italic tracking-wider text-[#4A4A40] transition-colors"
+                  className="group relative font-editorial text-5xl sm:text-7xl italic tracking-wider text-primary transition-colors"
                 >
-                  <span className="relative z-10 group-hover:text-[#B99C88] transition-colors duration-500 uppercase">{item.title}</span>
+                  <span className="relative z-10 group-hover:text-accent transition-colors duration-500 uppercase">{item.title}</span>
                   <motion.span
-                    className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[#F5F2EB] opacity-0 text-[120px] font-sans font-bold pointer-events-none select-none z-0 group-hover:opacity-10"
+                    className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-warm opacity-0 text-[120px] font-sans font-bold pointer-events-none select-none z-0 group-hover:opacity-10"
                   >
                     {index + 1}
                   </motion.span>
@@ -132,7 +135,7 @@ export function Header({ onNavigate }: HeaderProps) {
               ))}
             </nav>
 
-            <div className="p-12 text-center text-xs uppercase tracking-[0.2em] text-[#4A4A40]/60">
+            <div className="p-12 text-center text-xs uppercase tracking-[0.2em] text-primary/60">
               <p>{t.header.grounded}</p>
             </div>
           </motion.div>

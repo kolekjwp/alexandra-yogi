@@ -58,9 +58,12 @@ function MainApp() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FDFBF7] font-sans text-[#4A4A40] selection:bg-[#DCCBC1] selection:text-[#4A4A40]">
+    <div className="min-h-screen bg-cream font-sans text-primary selection:bg-rose selection:text-primary">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-cream focus:px-4 focus:py-2 focus:rounded-full">
+        Skip to content
+      </a>
       <Header onNavigate={handleNavigate} />
-      <main>
+      <main id="main-content">
         <AnimatePresence mode="wait">
           {view === "home" ? (
             <motion.div

@@ -6,10 +6,10 @@ import { MoveHorizontal } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const images = [
-  "https://images.unsplash.com/photo-1677741447423-a2dded1b9495?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0JTIwYm9obyUyMGFlc3RoZXRpYyUyMG91dGRvb3J8ZW58MXx8fHwxNzYzNjQ1MjUzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-  "https://images.unsplash.com/photo-1707257969667-68804d47f5da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwc3RyZXRjaGluZyUyMHN1bnJpc2UlMjBuYXR1cmUlMjBib2hvfGVufDF8fHx8MTc2MzY0NTI1M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-  "https://images.unsplash.com/photo-1728547066727-f3bc117738e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpdGF0aW9uJTIwd29tYW4lMjBjbG9zZSUyMHVwJTIwc2VyZW5lJTIwYm9ob3xlbnwxfHx8fDE3NjM1Njc2OTV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-  "https://images.unsplash.com/photo-1632182591734-633b89f42d17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwcG9zZSUyMGFydGlzdGljJTIwbGlnaHQlMjBib2hvfGVufDF8fHx8MTc2MzY0NTI1M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+  { src: "https://images.unsplash.com/photo-1677741447423-a2dded1b9495?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0JTIwYm9obyUyMGFlc3RoZXRpYyUyMG91dGRvb3J8ZW58MXx8fHwxNzYzNjQ1MjUzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral", alt: "Yoga instructor outdoor portrait in boho aesthetic" },
+  { src: "https://images.unsplash.com/photo-1707257969667-68804d47f5da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwc3RyZXRjaGluZyUyMHN1bnJpc2UlMjBuYXR1cmUlMjBib2hvfGVufDF8fHx8MTc2MzY0NTI1M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral", alt: "Yoga stretching at sunrise in nature" },
+  { src: "https://images.unsplash.com/photo-1728547066727-f3bc117738e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpdGF0aW9uJTIwd29tYW4lMjBjbG9zZSUyMHVwJTIwc2VyZW5lJTIwYm9ob3xlbnwxfHx8fDE3NjM1Njc2OTV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral", alt: "Serene woman in meditation close-up" },
+  { src: "https://images.unsplash.com/photo-1632182591734-633b89f42d17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwcG9zZSUyMGFydGlzdGljJTIwbGlnaHQlMjBib2hvfGVufDF8fHx8MTc2MzY0NTI1M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral", alt: "Artistic yoga pose in soft boho light" },
 ];
 
 export function Gallery() {
@@ -42,9 +42,9 @@ export function Gallery() {
   };
 
   return (
-    <section id="stories" className="py-24 overflow-hidden bg-[#FDFBF7] relative">
+    <section id="stories" className="py-24 overflow-hidden bg-cream relative">
       <div className="mb-12 text-center flex flex-col items-center gap-4">
-        <h2 className="font-editorial text-4xl text-[#4A4A40] sm:text-5xl tracking-wide">
+        <h2 className="font-editorial text-4xl text-primary sm:text-5xl tracking-wide">
            {t.gallery.title}
         </h2>
         <motion.div 
@@ -52,7 +52,7 @@ export function Gallery() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
             viewport={{ once: true }}
-            className="flex items-center gap-2 text-[#B99C88] text-sm tracking-widest uppercase"
+            className="flex items-center gap-2 text-accent text-sm tracking-widest uppercase"
         >
              <MoveHorizontal className="w-4 h-4 animate-pulse" />
              <span>{t.gallery.drag}</span>
@@ -62,19 +62,22 @@ export function Gallery() {
 
       <div className="px-4 cursor-grab active:cursor-grabbing">
         <Slider {...settings} className="gallery-slider">
-          {images.map((src, index) => (
+          {images.map((image, index) => (
             <div key={index} className="px-4 outline-none">
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.4 }}
-                className="relative aspect-[3/4] overflow-hidden rounded-[2rem] shadow-lg shadow-[#DCCBC1]/30 group"
+                className="relative aspect-[3/4] overflow-hidden rounded-[2rem] shadow-lg shadow-rose/30 group"
               >
                 <ImageWithFallback
-                  src={src}
-                  alt={`Gallery image ${index + 1}`}
+                  src={image.src}
+                  alt={image.alt}
+                  width={1080}
+                  height={1440}
+                  loading="lazy"
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-[#4A4A40]/0 group-hover:bg-[#4A4A40]/10 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
               </motion.div>
             </div>
           ))}
@@ -133,7 +136,7 @@ export function Gallery() {
           content: '•';
           font-size: 20px;
           line-height: 20px;
-          color: #DCCBC1;
+          color: var(--color-rose);
           opacity: 0.5;
           position: absolute;
           top: 50%;
@@ -141,7 +144,7 @@ export function Gallery() {
           transform: translate(-50%, -50%);
         }
         .slick-dots li.slick-active button:before {
-          color: #B99C88;
+          color: var(--color-accent);
           opacity: 1;
         }
       `}</style>

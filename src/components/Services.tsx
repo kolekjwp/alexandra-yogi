@@ -34,13 +34,13 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="px-6 py-24 sm:px-12 sm:py-32 bg-[#EFECE4]">
+    <section id="services" className="px-6 py-24 sm:px-12 sm:py-32 bg-surface">
       <div className="mx-auto max-w-7xl">
         <div className="mb-20 text-center">
-            <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.2em] text-[#8C8C80]">
+            <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.2em] text-subtle">
                 {t.services.label}
             </span>
-            <h2 className="font-editorial text-5xl text-[#4A4A40] sm:text-6xl uppercase tracking-wider">
+            <h2 className="font-editorial text-5xl text-primary sm:text-6xl uppercase tracking-wider">
                 {t.services.title}
             </h2>
         </div>
@@ -55,23 +55,23 @@ export function Services() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.8 }}
               whileHover={{ y: -10 }}
-              className="group relative flex cursor-pointer flex-col justify-between overflow-hidden rounded-[2rem] bg-[#FDFBF7] p-8 shadow-sm transition-shadow hover:shadow-xl hover:shadow-[#DCCBC1]/30"
+              className="group relative flex cursor-pointer flex-col justify-between overflow-hidden rounded-[2rem] bg-cream p-8 shadow-sm transition-shadow hover:shadow-xl hover:shadow-rose/30"
             >
               <div>
-                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#EFECE4] text-[#4A4A40] group-hover:bg-[#DCCBC1] transition-colors">
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-full bg-surface text-primary group-hover:bg-rose transition-colors">
                   <offer.icon className="h-5 w-5" />
                 </div>
-                <h3 className="mb-3 font-editorial text-2xl text-[#4A4A40] uppercase tracking-wide">
+                <h3 className="mb-3 font-editorial text-2xl text-primary uppercase tracking-wide">
                     {offer.title}
                 </h3>
-                <p className="mb-8 text-sm leading-relaxed text-[#6B6B60]">
+                <p className="mb-8 text-sm leading-relaxed text-muted">
                     {offer.description}
                 </p>
               </div>
               
-              <div className="flex items-center justify-between border-t border-[#4A4A40]/10 pt-6">
-                <span className="font-medium text-[#4A4A40]">{offer.price}</span>
-                <button className="flex h-8 w-8 items-center justify-center rounded-full border border-[#4A4A40]/20 text-[#4A4A40] transition-all group-hover:bg-[#4A4A40] group-hover:text-[#FDFBF7]">
+              <div className="flex items-center justify-between border-t border-primary/10 pt-6">
+                <span className="font-medium text-primary">{offer.price}</span>
+                <button className="flex h-8 w-8 items-center justify-center rounded-full border border-primary/20 text-primary transition-all group-hover:bg-primary group-hover:text-cream">
                     <ArrowRight className="h-4 w-4" />
                 </button>
               </div>

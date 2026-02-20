@@ -18,12 +18,12 @@ export function Contact() {
                 <span className="block text-8xl sm:text-9xl mb-4 animate-bounce-slow">🌸</span>
             </motion.div>
 
-            <h2 className="mb-8 font-editorial text-5xl text-[#4A4A40] sm:text-7xl leading-tight tracking-wide">
+            <h2 className="mb-8 font-editorial text-5xl text-primary sm:text-7xl leading-tight tracking-wide">
                 {t.contact.title} <br />
-                <span className="italic text-[#B99C88]">{t.contact.subtitle}</span>
+                <span className="italic text-accent">{t.contact.subtitle}</span>
             </h2>
 
-            <p className="mb-12 text-lg text-[#6B6B60] sm:text-xl">
+            <p className="mb-12 text-lg text-muted sm:text-xl">
                 {t.contact.desc}
             </p>
 
@@ -31,26 +31,26 @@ export function Contact() {
                 href="mailto:hello@alexandrayogi.com"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center justify-center rounded-full bg-[#4A4A40] px-10 py-5 text-lg font-medium tracking-wide text-[#FDFBF7] transition-all hover:bg-[#5E5E52] shadow-lg shadow-[#4A4A40]/20"
+                className="inline-flex items-center justify-center rounded-full bg-primary px-10 py-5 text-lg font-medium tracking-wide text-cream transition-all hover:bg-primary-hover shadow-lg shadow-primary/20"
             >
                 hello@alexandrayogi.com
             </motion.a>
 
-            <div className="mt-24 flex flex-col items-center justify-center gap-8 border-t border-[#4A4A40]/10 pt-12 text-[#8C8C80] sm:flex-row">
-                <a href="#" className="hover:text-[#4A4A40] transition-colors">Instagram</a>
-                <span className="hidden h-1 w-1 rounded-full bg-[#DCCBC1] sm:block"></span>
-                <a href="#" className="hover:text-[#4A4A40] transition-colors">Insight Timer</a>
-                <span className="hidden h-1 w-1 rounded-full bg-[#DCCBC1] sm:block"></span>
-                <a href="#" className="hover:text-[#4A4A40] transition-colors">Spotify</a>
+            <div className="mt-24 flex flex-col items-center justify-center gap-8 border-t border-primary/10 pt-12 text-subtle sm:flex-row">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a>
+                <span className="hidden h-1 w-1 rounded-full bg-rose sm:block"></span>
+                <a href="https://insighttimer.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Insight Timer</a>
+                <span className="hidden h-1 w-1 rounded-full bg-rose sm:block"></span>
+                <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Spotify</a>
             </div>
             
-            <p className="mt-12 text-xs uppercase tracking-[0.2em] text-[#4A4A40]/40">
+            <p className="mt-12 text-xs uppercase tracking-[0.2em] text-primary/40">
                 © {new Date().getFullYear()} Alexandra Yogi. {t.contact.copyright}
             </p>
        </div>
        
        {/* Decorative blob */}
-       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[800px] h-[800px] bg-[#EFECE4] rounded-full blur-3xl -z-10 opacity-50 pointer-events-none" />
+       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[800px] h-[800px] bg-surface rounded-full blur-3xl -z-10 opacity-50 pointer-events-none" />
     </section>
   );
 }

@@ -9,7 +9,7 @@ interface MarqueeProps {
 
 export function Marquee({ text, className = "", repeat = 4 }: MarqueeProps) {
   return (
-    <div className={`relative flex overflow-hidden bg-[#B99C88] py-4 text-[#F5F2EB] ${className}`}>
+    <div className={`relative flex overflow-hidden bg-accent py-4 text-warm ${className}`}>
       <motion.div
         className="flex whitespace-nowrap"
         animate={{ x: "-50%" }}
